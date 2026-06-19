@@ -22,10 +22,10 @@ class TodoController extends Controller
 
     public function store(Request $request)
     {
-        $content = $request->input('content');
+        $inouts = $request->all();
 
         $todo = new Todo();
-        $todo->content = $content;
+        $todo->fill($inouts);
         $todo->save();
 
         return redirect()->route('todo.index');
