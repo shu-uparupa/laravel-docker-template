@@ -16,7 +16,7 @@
 - $todosはインスタンス化したTodoクラスにallメソッドを使ってtodosテーブルのレコードが取得されたCollectionクラスで、そのデータをバリュー、'todos'のキーとした連想配列でtodo.indexのBladeファイルに渡している。
 
 ### index.blade.phpの$todos・$todoに代入されているものは何か
-- $todosはTodoController.phpから渡されたtodosテーブルのすべてのレコードを持った連想配列が代入されている。
+- $todosはTodoController.phpから渡されたtodosテーブルのすべてのレコードを持ったCollectionクラスが代入されている。
 - $todoは$todosの配列のバリューである一つ一つのレコードが入った配列。
 
 ## Todo作成機能
@@ -43,7 +43,9 @@
 - マイグレーションファイルをgitで共有することで複数の開発者が同じテーブル構成で作業することができる。
 
 ### マイグレーションファイルのup()、down()は何のコマンドを実行した時に呼び出されるのか
-- artisanコマンド　php artisan migrate
+- artisanコマンド　
+  (up) php artisan migrate
+  (down) php artisan migrate:rollback
 
 ### Seederクラスの役割は何か
 - sqlを書かずにphpコードでテストデータを投入できる。
