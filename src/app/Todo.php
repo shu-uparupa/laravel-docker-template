@@ -12,3 +12,4 @@ class Todo extends Model
         'content',
     ];
 }
+

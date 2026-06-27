@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/todo', 'TodoController@index')->name('todo.index');
 Route::get('/todo/create', 'TodoController@create')->name('todo.create');
 Route::post('/todo', 'TodoController@store')->name('todo.store');
+
+//練習課題
+Route::get('/gizumo_lv1', 'GizController@gizumo');
