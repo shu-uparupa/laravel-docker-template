@@ -15,7 +15,6 @@
               @if($errors->has('content'))
                 <span class="text-danger">{{ $errors->first('content') }}</span>
               @endif
-              <input type="text" class="form-control" name="content" value="{{ $todo->content }}">
             </div>
           </div>
           <div class="form-group row mb-0">
